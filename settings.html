@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Settings</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="forecast.html">Forecast</a></li>
+                <li><a href="radar.html">Radar</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Settings</h2>
+
+            <div class="settings-grid">
+                <!-- Location Settings -->
+                <div class="settings-section">
+                    <h3>📍 Location Settings</h3>
+                    <div class="setting-item">
+                        <label for="location">Primary Location:</label>
+                        <input type="text" id="location" placeholder="Enter your city or zip code" value="New York, NY">
+                        <button class="btn-primary">Save Location</button>
+                    </div>
+                    <div class="setting-item">
+                        <label>Enable Location Services:</label>
+                        <input type="checkbox" id="location-services" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label for="secondary-location">Secondary Location:</label>
+                        <input type="text" id="secondary-location" placeholder="Optional second location">
+                        <button class="btn-secondary">Add</button>
+                    </div>
+                </div>
+
+                <!-- Temperature Settings -->
+                <div class="settings-section">
+                    <h3>🌡️ Temperature Settings</h3>
+                    <div class="setting-item">
+                        <label>Temperature Unit:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="fahrenheit" name="temp-unit" value="F" checked>
+                            <label for="fahrenheit">Fahrenheit (°F)</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="celsius" name="temp-unit" value="C">
+                            <label for="celsius">Celsius (°C)</label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Feel Like Temperature:</label>
+                        <input type="checkbox" id="feel-like-temp" checked>
+                    </div>
+                </div>
+
+                <!-- Display Settings -->
+                <div class="settings-section">
+                    <h3>🎨 Display Settings</h3>
+                    <div class="setting-item">
+                        <label>Theme:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="light-mode" name="theme" value="light" checked>
+                            <label for="light-mode">Light Mode</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="dark-mode" name="theme" value="dark">
+                            <label for="dark-mode">Dark Mode</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="auto-mode" name="theme" value="auto">
+                            <label for="auto-mode">Auto (System)</label>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <label>Text Size:</label>
+                        <select id="text-size">
+                            <option value="small">Small</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="large">Large</option>
+                            <option value="xlarge">Extra Large</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Wind Settings -->
+                <div class="settings-section">
+                    <h3>💨 Wind Settings</h3>
+                    <div class="setting-item">
+                        <label>Wind Speed Unit:</label>
+                        <select id="wind-unit">
+                            <option value="mph" selected>Miles per Hour (mph)</option>
+                            <option value="kmh">Kilometers per Hour (km/h)</option>
+                            <option value="knots">Knots</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Notification Settings -->
+                <div class="settings-section">
+                    <h3>🔔 Notifications</h3>
+                    <div class="setting-item">
+                        <input type="checkbox" id="severe-alerts" checked>
+                        <label for="severe-alerts">Severe Weather Alerts</label>
+                    </div>
+                    <div class="setting-item">
+                        <input type="checkbox" id="daily-forecast" checked>
+                        <label for="daily-forecast">Daily Forecast Notifications</label>
+                    </div>
+                    <div class="setting-item">
+                        <input type="checkbox" id="hourly-updates">
+                        <label for="hourly-updates">Hourly Weather Updates</label>
+                    </div>
+                    <div class="setting-item">
+                        <input type="checkbox" id="pollen-alerts">
+                        <label for="pollen-alerts">Pollen Alerts</label>
+                    </div>
+                </div>
+
+                <!-- Data & Privacy -->
+                <div class="settings-section">
+                    <h3>🔒 Data & Privacy</h3>
+                    <div class="setting-item">
+                        <input type="checkbox" id="share-location">
+                        <label for="share-location">Share Location with Weather Service</label>
+                    </div>
+                    <div class="setting-item">
+                        <input type="checkbox" id="cookies">
+                        <label for="cookies">Allow Cookies for Better Experience</label>
+                    </div>
+                    <div class="setting-item">
+                        <button class="btn-secondary">Clear Cache & Data</button>
+                    </div>
+                </div>
+
+                <!-- Update Settings -->
+                <div class="settings-section">
+                    <h3>🔄 Update Settings</h3>
+                    <div class="setting-item">
+                        <label>Auto-Refresh Interval:</label>
+                        <select id="refresh-interval">
+                            <option value="5">Every 5 minutes</option>
+                            <option value="15" selected>Every 15 minutes</option>
+                            <option value="30">Every 30 minutes</option>
+                            <option value="60">Every 1 hour</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Save Changes Button -->
+            <div class="settings-actions">
+                <button class="btn-primary btn-large">Save All Settings</button>
+                <button class="btn-secondary btn-large">Reset to Defaults</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Weather Website</p>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (this.textContent.includes('Save')) {
+                    alert('Settings saved successfully!');
+                } else if (this.textContent.includes('Reset')) {
+                    alert('Settings reset to defaults!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
